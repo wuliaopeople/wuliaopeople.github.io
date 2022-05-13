@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wuliaopeople.github.io</id>
     <title>无聊人博客</title>
-    <updated>2022-05-13T15:18:41.029Z</updated>
+    <updated>2022-05-13T15:28:52.318Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wuliaopeople.github.io"/>
     <link rel="self" href="https://wuliaopeople.github.io/atom.xml"/>
@@ -10,4 +10,21 @@
     <logo>https://wuliaopeople.github.io/images/avatar.png</logo>
     <icon>https://wuliaopeople.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, 无聊人博客</rights>
+    <entry>
+        <title type="html"><![CDATA[腾讯API高清QQ头像调用接口]]></title>
+        <id>https://wuliaopeople.github.io/post/teng-xun-api-gao-qing-qq-tou-xiang-diao-yong-jie-kou/</id>
+        <link href="https://wuliaopeople.github.io/post/teng-xun-api-gao-qing-qq-tou-xiang-diao-yong-jie-kou/">
+        </link>
+        <updated>2022-05-13T15:25:00.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="说明">说明</h2>
+<p>写单页的时候，我会经常使用到调用QQ头像来获取自己的头像地址，这里我分享一下我找到的腾讯API的头像接口吧</p>
+<p>支持 http 也支持 https 看自己选择使用<br>
+https://q1.qlogo.cn/g?b=qq&amp;nk=QQ账号&amp;s=640<br>
+https://p.qlogo.cn/gh/707537805/QQ群号/640/<br>
+把以上链接内的账号或群号改成对应内容即可调用啦</p>
+<p>示例：http://q1.qlogo.cn/g?b=qq&amp;nk=2321201586&amp;s=640</p>
+<p>下面图片来源于我的QQ头像调用<br>
+&lt;img src=“http://q1.qlogo.cn/g?b=qq&amp;nk=2321201586&amp;s=640”&gt;</p>
+]]></content>
+    </entry>
 </feed>
