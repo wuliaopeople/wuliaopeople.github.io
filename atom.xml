@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://wuliaopeople.github.io</id>
+    <title>无聊人博客</title>
+    <updated>2022-05-13T15:18:41.029Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://wuliaopeople.github.io"/>
+    <link rel="self" href="https://wuliaopeople.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://wuliaopeople.github.io/images/avatar.png</logo>
+    <icon>https://wuliaopeople.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, 无聊人博客</rights>
+</feed>
