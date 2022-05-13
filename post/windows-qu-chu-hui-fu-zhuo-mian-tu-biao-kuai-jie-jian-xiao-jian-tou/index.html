@@ -2,22 +2,18 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>uniCloud服务空间免费云存储图床源码 | 无聊人博客</title>
+<title>Windows去除 / 恢复桌面图标快捷键小箭头 | 无聊人博客</title>
 <link rel="shortcut icon" href="https://wuliaopeople.github.io/favicon.ico?v=1652456301837">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://wuliaopeople.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="uniCloud服务空间免费云存储图床源码 | 无聊人博客 - Atom Feed" href="https://wuliaopeople.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Windows去除 / 恢复桌面图标快捷键小箭头 | 无聊人博客 - Atom Feed" href="https://wuliaopeople.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="##简介
-uniCloud提供免费10G云存储空间，不限流量，底层是阿里云OSS，因此速度非常快。
-它支持绑定自定义域名(需要备案)如果没有备案的域名，也可以使用它自带的域名。
-可以来我的测试站点
-
-##安装教程
-第一步 首先在https:..." />
+    <meta name="description" content="创建一个 .bat 格式的文件，文件中写入代码，以管理员身份运行。
+清除桌面图标小箭头
+reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\E..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -84,7 +80,7 @@ uniCloud提供免费10G云存储空间，不限流量，底层是阿里云OSS，
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              uniCloud服务空间免费云存储图床源码
+              Windows去除 / 恢复桌面图标快捷键小箭头
             </h2>
             <div class="post-info">
               <span>
@@ -98,16 +94,23 @@ uniCloud提供免费10G云存储空间，不限流量，底层是阿里云OSS，
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>##简介<br>
-uniCloud提供免费10G云存储空间，不限流量，底层是阿里云OSS，因此速度非常快。<br>
-它支持绑定自定义域名(需要备案)如果没有备案的域名，也可以使用它自带的域名。<br>
-可以来我的<a href="https://tc.wlr.lol/">测试站点</a><br>
-<img src="https://blog.wlr.lol/usr/uploads/2022/05/856502277.jpg" alt="Screenshot_2022-05-12-08-59-34-22.jpg" loading="lazy"><br>
-##安装教程<br>
-第一步 首先在<a href="https://unicloud.dcloud.net.cn">https://unicloud.dcloud.net.cn</a>注册一个账号，有账号的可以跳过这一步</p>
-<p>第二步 访问链接<a href="https://unicloud.dcloud.net.cn/home">https://unicloud.dcloud.net.cn/home</a>在这里创建一个应用，然后手动将服务空间里的 spaceId 和 clientSecret 配置到源码的config.php里面即可，后面访问首页即可测试。<br>
-##源码下载<br>
-https://blog.wlr.lol/accessories/159</p>
+                <p>创建一个 .bat 格式的文件，文件中写入代码，以管理员身份运行。</p>
+<p>清除桌面图标小箭头</p>
+<pre><code>reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot; /v 29 /d &quot;%systemroot%\system32\imageres.dll,197&quot; /t reg_sz /f
+taskkill /f /im explorer.exe
+attrib -s -r -h &quot;%userprofile%\AppData\Local\iconcache.db&quot;
+del &quot;%userprofile%\AppData\Local\iconcache.db&quot; /f /q
+start explorer
+pause
+</code></pre>
+<p>恢复桌面图标小箭头</p>
+<pre><code>reg delete &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot; /v 29 /f
+taskkill /f /im explorer.exe
+attrib -s -r -h &quot;%userprofile%\AppData\Local\iconcache.db&quot;
+del &quot;%userprofile%\AppData\Local\iconcache.db&quot; /f /q
+start explorer
+pause
+</code></pre>
 
               </div>
               <div class="toc-container">
@@ -120,9 +123,9 @@ https://blog.wlr.lol/accessories/159</p>
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://wuliaopeople.github.io/post/teng-xun-api-gao-qing-qq-tou-xiang-diao-yong-jie-kou/">
+            <a href="https://wuliaopeople.github.io/post/unicloud-fu-wu-kong-jian-mian-fei-yun-cun-chu-tu-chuang-yuan-ma/">
               <h3 class="post-title">
-                腾讯API高清QQ头像调用接口
+                uniCloud服务空间免费云存储图床源码
               </h3>
             </a>
           </div>

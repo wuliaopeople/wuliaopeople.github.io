@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wuliaopeople.github.io</id>
     <title>无聊人博客</title>
-    <updated>2022-05-13T15:37:06.211Z</updated>
+    <updated>2022-05-13T15:38:27.221Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wuliaopeople.github.io"/>
     <link rel="self" href="https://wuliaopeople.github.io/atom.xml"/>
@@ -10,6 +10,31 @@
     <logo>https://wuliaopeople.github.io/images/avatar.png</logo>
     <icon>https://wuliaopeople.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, 无聊人博客</rights>
+    <entry>
+        <title type="html"><![CDATA[Windows去除 / 恢复桌面图标快捷键小箭头]]></title>
+        <id>https://wuliaopeople.github.io/post/windows-qu-chu-hui-fu-zhuo-mian-tu-biao-kuai-jie-jian-xiao-jian-tou/</id>
+        <link href="https://wuliaopeople.github.io/post/windows-qu-chu-hui-fu-zhuo-mian-tu-biao-kuai-jie-jian-xiao-jian-tou/">
+        </link>
+        <updated>2022-05-13T15:37:37.000Z</updated>
+        <content type="html"><![CDATA[<p>创建一个 .bat 格式的文件，文件中写入代码，以管理员身份运行。</p>
+<p>清除桌面图标小箭头</p>
+<pre><code>reg add &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot; /v 29 /d &quot;%systemroot%\system32\imageres.dll,197&quot; /t reg_sz /f
+taskkill /f /im explorer.exe
+attrib -s -r -h &quot;%userprofile%\AppData\Local\iconcache.db&quot;
+del &quot;%userprofile%\AppData\Local\iconcache.db&quot; /f /q
+start explorer
+pause
+</code></pre>
+<p>恢复桌面图标小箭头</p>
+<pre><code>reg delete &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons&quot; /v 29 /f
+taskkill /f /im explorer.exe
+attrib -s -r -h &quot;%userprofile%\AppData\Local\iconcache.db&quot;
+del &quot;%userprofile%\AppData\Local\iconcache.db&quot; /f /q
+start explorer
+pause
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[uniCloud服务空间免费云存储图床源码]]></title>
         <id>https://wuliaopeople.github.io/post/unicloud-fu-wu-kong-jian-mian-fei-yun-cun-chu-tu-chuang-yuan-ma/</id>
